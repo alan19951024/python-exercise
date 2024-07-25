@@ -1,0 +1,25 @@
+s = input() # This company is not poor at all.
+
+s1 = s.split('not')[0]
+s2 = s.split('at all')[1]
+d = s1+'good'+s2
+
+print(d) # This company is good.
+
+import re
+s = input() # This company is not poor at all.
+
+s = re.sub(r'not.*?at all', 'good', s)
+
+print(d)
+
+# s = input() # This company is not poor at all.
+s = 'This company is not poor at all.'
+
+
+s1 = s.find('not')
+s2 = s.find('at all') + 6
+
+d = s[0:s1]+'good'+s[s2:]
+
+print(d) # This company is good.
