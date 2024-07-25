@@ -1,0 +1,17 @@
+def climb_stairs(n):
+    # 當n為0或1時，只有一種走法
+    if n == 0 or n == 1:
+        return 1
+
+    # 創建一個列表來存儲每階樓梯的走法數量
+    dp = [0] * (n + 1)
+    dp[0] = 1
+    dp[1] = 1
+    # print(dp)
+    # 計算目前階層到下一階的走法數量
+    for i in range(2, n + 1):
+      dp[i] = dp[i - 1] + dp[i - 2]
+      # print(dp[i])
+    return dp[n]
+n = int(input())
+climb_stairs(n)
