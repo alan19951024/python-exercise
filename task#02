@@ -6,6 +6,7 @@ d = s1+'good'+s2
 
 print(d) # This company is good.
 
+
 import re
 s = input() # This company is not poor at all.
 
