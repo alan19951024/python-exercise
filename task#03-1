@@ -1,0 +1,37 @@
+a, b = input(), input() # 11, 20
+
+
+'''
+Your Code
+'''
+
+
+print(d) # (12, 15)
+
+a, b = int(input()), int(input()) # 11, 20
+result = []
+for i in range(a,b+1):
+  k = i
+  divisible = True
+  while k > 0:
+    if k % 10 == 0:
+      divisible = False
+      break
+    elif i % (k%10) != 0:
+      divisible = False
+      break
+    else:
+      k = k//10 #檢查位數
+  if divisible == True:
+    result.append(i)
+print(result)
+max_num = 0
+for i in range(len(result)-1):
+  num = result[i+1] - result[i]
+  if num > max_num:
+    max_num = num
+    max = result[i+1]
+    min = result[i]
+print(max_num)
+d = (min,max)
+print(d)
