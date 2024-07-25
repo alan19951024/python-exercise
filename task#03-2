@@ -1,0 +1,22 @@
+nums = [2,7,11,15]
+target = 9
+complement = []
+for i,num in enumerate(nums):
+  print(i,num)
+  for a in nums[i+1:]:
+    if num + a == target:
+      print(num + a)
+      two = nums.index(a)
+      complement.append(i)
+      complement.append(two)
+print(complement)
+
+nums = [3,2,4]
+target = 6
+complement = {}
+
+for i, num in enumerate(nums):
+  finish = target - num
+  if finish in complement:
+     print([complement[finish],i])
+  complement[num] = i
