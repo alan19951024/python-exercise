@@ -1,0 +1,19 @@
+s = 'Here are UPPERCASE and lowercase chars.'
+word = {}
+
+for i,a in enumerate(s):
+  if a not in word:
+    word[a] = [i+1]
+  else:
+    word[a].append(i+1)
+print(word)
+
+s = 'Here are UPPERCASE and lowercase chars.'
+word = {}
+
+for i,a in enumerate(s):
+  word.setdefault(a,[])
+  word[a].append(i+1)
+
+print(word)
+
