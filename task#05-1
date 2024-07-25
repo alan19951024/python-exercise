@@ -1,0 +1,13 @@
+from itertools import permutations
+
+s = input() # AB
+# 初始化一個空集合來存儲輸入的字母
+input_set = set()
+# 將輸入的字母加入集合
+input_set.update(s)
+# 計算由這些字母所組成的所有排列組合
+# for i in permutations(input_set):
+#   all_permutations.add(''.join(i))
+all_permutations = set(''.join(i) for i in permutations(input_set))
+sorted_permutations = sorted(all_permutations)
+print(sorted_permutations) # ['AB', 'BA']
